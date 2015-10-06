@@ -1,0 +1,11 @@
+AllowOverride All
+
+RewriteEngine On
+
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+RewriteRule ^about\.html$ /about [R=301,L]
+RewriteRule ^area\.html$ /area [R=301,L]
+RewriteRule ^feedback\.html$ /feedback [R=301,L]
+RewriteRule ^gallery\.html$ /gallery [R=301,L]

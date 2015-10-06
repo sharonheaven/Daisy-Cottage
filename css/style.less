@@ -1,0 +1,257 @@
+@1: #DEDD83;
+@2: #94AA28;
+@3: #7C683C;
+@4: #A08F6B;
+@5: #D8D39B;
+
+body {
+    background-color: #222;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body#home {
+    .root-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+nav.navbar {
+    margin: 0 !important;
+}
+
+.root-container {
+    margin-right: 0px;
+    margin-left: 0px;
+    flex: 1;
+    background-color: @2;
+}
+
+.main-header {
+    text-align: center;
+    background-color: ;
+    margin: 20px 50px;
+    
+    h1.heading {
+        font-size: 5em;
+        text-shadow: 0px 5px 100px rgba(20, 20, 20, 0.5);
+        margin-top: 10px;
+        text-shadow: 2px #000;
+        color: #fff;
+    }
+    
+    h2.subheading {
+        font-size: 3em;
+        text-shadow: 0px 5px 100px rgba(20, 20, 20, 0.2);
+        margin: 0 auto 20px;
+        color: #fff;
+    }
+}
+
+
+
+#footer {
+    padding: 10px 20px;
+    background-color: #222;
+    color: #9d9d9d;
+    
+    a, a:link, a:visited {
+        color: #9d9d9d;
+        text-decoration: none;
+    }
+    
+    a:hover, a:active {
+        color: #0099FF;
+        text-decoration: none;
+    }
+    
+    p.left, p.center, p.right { text-align: center; }
+    
+    @media(min-width: 768px){
+        p.left {
+            text-align: left;
+        }
+        p.center {
+            text-align: center;   
+        }
+        p.right {
+            text-align: right;
+        }
+    }
+}
+
+#slider-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: screen(@2, #bbb);
+	display: block;
+	max-width: 1000px;
+    
+    div#slider {
+        height: 70vh !important;
+		background-color: screen(@2, #bbb);
+    }
+}
+
+#thumb-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: screen(@2, #bbb) !important;
+    margin: 0 30px;
+    padding: 20px;
+    img {
+        height: 60vh;
+        margin: 0 5px;
+    }
+}
+
+.page-block {
+    background-color: screen(@2, #bbb);
+    padding: 20px;
+    margin-bottom: 30px;
+	
+	h1 {
+        border-bottom: screen(@2,#777) 3px solid;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        max-width: 500px;
+    }
+}
+
+.page-block.summary {
+    * {
+        font-size: 1em;
+    }
+    
+    a {
+        color: inherit !important;
+    }
+    
+    a:hover {
+        text-decoration: none;
+        color: screen(@2, #333) !important;
+    }
+    
+    h1 {
+        font-size: 3em;
+        margin-bottom: 30px;
+		border: none;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 0 !important;
+    }
+    
+    h3 {
+        margin: 5px 0 5px 20px;
+    }
+}
+
+
+blockquote{
+	display:block;
+	background: screen(@5, #bbb);
+	padding: 15px 30px 15px 50px;
+	margin: 0 0 30px;
+	position: relative;
+
+	/*Font*/
+	font-family: Georgia, serif;
+	font-size: 16px;
+	line-height: 1.2;
+	color: #666;
+	text-align: justify;
+
+	/*Borders - (Optional)*/
+	border-left: 15px solid @3;
+	border-right: 5px solid @3;
+
+	/*Box Shadow - (Optional)*/
+	-moz-box-shadow: 2px 2px 15px #ccc;
+	-webkit-box-shadow: 2px 2px 15px #ccc;
+	box-shadow: 2px 2px 15px #ccc;
+
+	::before{
+		content: "\201C"; /*Unicode for Left Double Quote*/
+
+		/*Font*/
+		font-family: Georgia, serif;
+		font-size: 60px;
+		font-weight: bold;
+		color: #999;
+
+		/*Positioning*/
+		position: absolute;
+		left: 10px;
+		top: 5px;
+	}
+	
+	::after {
+		/*Reset to make sure*/
+  		content: "";
+	}
+	
+	a{
+		text-decoration: none;
+		background: @3;
+		cursor: pointer;
+		padding: 0 3px;
+		color: @3;
+		
+		:hover {
+			color: #666;
+		}
+	}
+
+	em {
+		font-style: italic;
+	}
+	
+	
+}
+
+.page-block.comment-holder {
+	padding: 1px 50px;
+	
+	h1 {
+		margin: 50px 0 50px !important;
+		
+		span a {
+			color: @2;
+		}
+	}
+	
+	blockquote {
+		h3.comment-title {
+			margin-top: 0;
+		}
+		
+		p.comment-author {
+			margin-top: 20px;
+			max-width: 100%;
+			padding: 20px;
+			color: screen(@3, #666);
+			background-color: multiply(@3, #ddd);
+			text-align: left;
+		}
+	}
+}
+
+.dark {
+	padding: 10px;
+	background-color: #555;
+}
+
+.margin-right {
+	margin-right: 20px;
+}
+
+.margin-left {
+	margin-left: 20px;
+}
+

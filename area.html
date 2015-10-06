@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Area &middot; Daisy Cottage</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/bootstrap.js"></script>
+    
+    <script src="js/jquery-scrolltofixed-min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="gallery">
+
+<nav id="header" class="navbar navbar-inverse navbar-static-top">
+    <script>
+        $("#header").load("header.html");
+    </script>
+</nav>
+
+
+<div class="root-container">
+    <div class="container">
+        <div class="row main-header">
+            <h1 class="heading">
+                Local Area
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs">
+                <div class="page-block summary">
+                    <h1>Summary</h1>
+                    
+                    <script>
+						$(document).ready(function(){
+							var numElementsProcessed = 0;
+							$("#stuff").children().each(function(i, el) {
+								var tagName = el.tagName.toLowerCase();
+								if(tagName.indexOf("h") == 0) {
+									numElementsProcessed = numElementsProcessed + 1;
+									$(el).attr("id", "heading" + numElementsProcessed);
+									var headingNum = +tagName.replace("h", "");
+									var summaryHeadingNum = headingNum + 1; //Summary title is h1, heading numbers continue from there
+									var headingText = $(el).text();
+									var elementToAdd = '<h' + summaryHeadingNum + '><a href="#heading' +numElementsProcessed + '">' + headingText + '</a></h' + summaryHeadingNum + '>';
+									$(".page-block.summary").append(elementToAdd);
+								};
+							});
+						});
+					</script>
+                </div>
+                <script>
+                    // Dock the footer to the bottom of the page, but scroll up to reveal more
+                    // content if the page is scrolled far enough.
+
+                    $('.summary').parent().scrollToFixed({
+                        marginTop: 60
+                    });
+                </script>
+            </div>
+            
+            
+            <div class="col-md-9">
+                <div class="page-block right" id="stuff">
+                    
+                    <h1>Walking, Cycling &amp; Hiking</h1>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has.</p>
+                    
+                    <h2>Walking</h2>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has. Est recusabo erroribus an.</p>
+                    
+                    <h2>Cycling</h2>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has. Est recusabo erroribus an. Mei ei veri graece, mel eripuit insolens urbanitas in. Eam nibh fabellas ad, nec tale mollis constituto at, eos ei partem nominati partiendo.</p>
+                    
+                    <h2>Hiking</h2>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has. Est recusabo erroribus an. Mei ei veri graece, mel eripuit insolens urbanitas in.</p>
+                    
+                    
+                    
+                    <h1>With the Kids</h1>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix.</p>
+                    
+                    <h2>Playparks</h2>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has. Est recusabo erroribus an.</p>
+                    
+                    <h2>Other stuff</h2>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has. Est recusabo erroribus an. Mei ei veri graece, mel eripuit insolens urbanitas in. Eam nibh fabellas ad, nec tale mollis constituto at, eos ei partem nominati partiendo. Et his porro cotidieque, offendit persequeris consequuntur at pro, saepe tritani nusquam has ex.</p>
+                    
+                    
+                    
+                    <h1>Historical Structures</h1>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. </p>
+                    
+                    <h2>Historical No 1</h2>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has. Est recusabo erroribus an. Mei ei veri graece, mel eripuit insolens urbanitas in. Eam nibh fabellas ad, nec tale mollis constituto at, eos ei partem nominati partiendo.</p>
+                    
+                    <h2>Historical No 2</h2>
+                    <p>Lorem ipsum dolor sit amet, qui ex vero maiorum quaerendum, ex oratio utroque vix. Cu consul dictas denique sea, eu aeterno aliquip splendide has. Est recusabo erroribus an.</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+    
+<div id="footer">
+    <script>
+        $("#footer").load("footer.html");
+    </script>
+</div>
+</body>
+</html>
